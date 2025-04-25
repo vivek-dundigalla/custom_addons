@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_customer_form" model="ir.ui.view">
+        <field name="name">customer</field>
+        <field name="model">business.management</field>
+        <field name="arch" type="xml">
+            <form string="customer">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="customer_id"/>
+                            <field name="customer_number"/>
+                            <field name="gender"/>
+                            <field name="age"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_customer_list" model="ir.ui.view">
+        <field name="name">customer</field>
+        <field name="model">business.management</field>
+        <field name="arch" type="xml">
+            <list string="customer">
+                <field name="customer_id"/>
+                <field name="customer_number"/>
+                <field name="gender"/>
+                <field name="age"/>
+                <field name="email"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_business_customer" model="ir.actions.act_window">
+        <field name="name">customer</field>
+        <field name="res_model">business.management</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_customer_list"/>
+    </record>
+
+
+</odoo>

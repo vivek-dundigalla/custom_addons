@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem id="menu_root" name="Business"/>
+    <menuitem id="menu_business_customer" name="Customer" action="action_business_customer" parent="menu_root" sequence="1"/>
+</odoo>
