@@ -13,11 +13,21 @@
 
     "assets": {
         "point_of_sale._assets_pos": [
-            "sdm_pos_customization/static/src/css/styles.css",
-            "sdm_pos_customization/static/src/js/product_price_patch.js",
-            "sdm_pos_customization/static/src/xml/product_card.xml",
-            "sdm_pos_customization/static/src/xml/product_screen.xml",
+            # JavaScript files
+            "sdm_pos_customization/static/src/js/customer_order_receipt.js",
+            "sdm_pos_customization/static/src/js/reprint_receipt_screen.js",
+            "sdm_pos_customization/static/src/js/product_price_patch.js",  # Price and barcode
+
+            # XML files for POS screens
+            "sdm_pos_customization/static/src/xml/order_receipt.xml",
+            "sdm_pos_customization/static/src/xml/product_card.xml",  # Custom product card template
+            "sdm_pos_customization/static/src/xml/product_screen.xml",  # Custom screen template (optional)
+
+            # CSS files
+            "sdm_pos_customization/static/src/css/styles.css",  # Custom styles
         ],
+
+
     },
 
     "data": [
@@ -26,5 +36,4 @@
 
     "installable": True,
     "auto_install": False,
-    "models": ["models/pos_config.py"],
 }
