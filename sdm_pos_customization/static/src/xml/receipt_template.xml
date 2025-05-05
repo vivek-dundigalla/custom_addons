@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="sdm_pos_customization.ReceiptScreen">
+        <div class="pos-receipt">
+
+            <!-- Custom Table for Receipt -->
+            <table class="receipt-product-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="props.receipt.orderlines" t-as="line" t-key="line.id">
+                        <tr>
+                            <td><t t-esc="line.product_name" /></td>
+                            <td><t t-esc="line.quantity" /></td>
+                            <td><t t-esc="line.price_display" /></td>
+                            <td><t t-esc="line.price_subtotal_display" /></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+
+            <!-- Optional Thank you Message -->
+            <div style="margin-top:10px; text-align:center; font-size:12px;">
+                Thank you for shopping with us!
+            </div>
+
+        </div>
+    </t>
+</templates>

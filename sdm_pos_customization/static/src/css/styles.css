@@ -1,10 +1,11 @@
+
 .product-info {
     margin-top: 2px;
     text-align: center;
 }
 
 .product-name {
-    font-size: 16px;
+    font-size: 14px;
     color: black;
     margin-top: 2px;
 }
@@ -25,4 +26,27 @@
     font-size: 12px;
     color: black;
 }
+
+
+/* Receipt Printed Table Style */
+
+.receipt-product-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.receipt-product-table th,
+.receipt-product-table td {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+.receipt-product-table thead {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
 
